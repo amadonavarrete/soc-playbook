@@ -53,38 +53,28 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 #### Contain
 
 1. **Isolate affected user accounts**
-   - **Procedure:** Disable or lock compromised user accounts to prevent further access.
-   - **Automate:** Utilize SOAR or identity management workflows to auto-disable accounts when phishing is confirmed.
-   - **Tools:** `Active Directory`
+   - Disable or lock compromised accounts to prevent unauthorized access.
 2. **Quarantine or remove malicious email**
-   - **Procedure:** Search for and retract the phishing email across all user mailboxes.
-   - **Automate:** Integrate with SOAR or mail security APIs to auto-quarantine emails based on IOC matches.
+   - Search for and retract the phishing email across all user mailboxes.
 3. **Block malicious URLs and Domains**
-   - **Procedure:** Add phishing URLs/domains to denylists at the firewall, DNS, or secure web gateway level.
-   - **Automate:** Automate IOC ingestion into blocklists via threat intelligence or SOAR pipelines.
+   - Add phishing URLs/domains to denylists at the firewall, DNS, or secure web gateway level.
 4. **Contain endpoint activity**
-   - **Procedure:** Isolate or restrict network access for affected endpoints.
-   - **Automate:** Configure endpoint policies to auto-isolate machines flagged for phishing payload execution or suspicious behavior.
+   - Isolate or restrict network access for affected endpoints.
+   - Monitor for any additional malicious activity from the system.
 
 #### Eradicate
 
 1. **Remove persistence mechanisms (if established)**
-   - **Procedure:** Scan for and remove registry entries, scheduled tasks, or startup items added by phishing payloads. 
-   - **Automate:** Configure EDR or SOAR workflows to detect and automatically clean known persistence artifacts.
-   - **Tools:** `EDR Platforms`
+   - Scan for and remove registry entries, scheduled tasks, or startup items added by phishing payloads.
 2. **Revoke compromised credentials and issue new ones**
-   - **Procedure:** Reset passwords or deactivate accounts involved in credential theft. Monitor for reuse of old credentials.
-   - **Automate:** Use identity orchestration to enforce password resets and monitor credential reuse attempts.
-   - **Tools:** `Active Directory`
+   - Reset passwords or deactivate accounts involved in credential theft.
+   - Monitor for reuse of old credentials.
 3. **Clear malicious artifacts from infected systems**
-   - **Procedure:** Perform full endpoint scans and remove malicious files, scripts, or executables delivered via phishing.
-   - **Automate:** Trigger full endpoint scans via EDR or SOAR playbook when phishing indicators are confirmed.
+   - Perform full endpoint scans and remove malicious files, scripts, or executables delivered via phishing.
 4. **Remove malicious email rules or forwarding settings**
-   - **Procedure:** Check and delete any unauthorized mailbox rules that forward emails or auto-delete messages.
-   - **Automate:** Use scripting or SOAR integrations to identify and clean rules in bulk.
+   - Check and delete any unauthorized mailbox rules that forward emails or auto-delete messages.
 5. **Purge residual phishing emails**
-   - **Procedure:** Search and purge any remaining instances of the phishing email from user mailboxes.
-   - **Automate:** Automate email purging via API calls from mail security solutions when malicious indicators are confirmed.
+   - Search and purge any remaining instances of the phishing email from user mailboxes.
 
 --------------
 
@@ -99,20 +89,17 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 In addition to the general steps and guidance in the incident response plan:
 
 1. **Restore affected systems to trusted state**
-   - **Procedure:** Reimage compromised endpoints or restore from known-good backups to ensure removal of phishing-related malware.
-   - **Tools:** `Endpoint management platforms, backup solutions`
+   - Reimage compromised endpoints or restore from known-good backups to ensure removal of phishing-related malware.
 2. **Re-enable user accounts with updated credentials**
-   - **Procedure:** After confirming no ongoing compromise, reinstate affected accounts with enforced password changes and MFA validation.
-   - **Tools:** `Active Directory`
+   - After confirming no ongoing compromise, reinstate affected accounts with enforced password changes and MFA validation.
 3. **Validate system integrity and functionality**
-   - **Procedure:** Perform post-restoration checks, including log reviews and endpoint scans, to verify clean state and operational readiness.
-   - **Tools:** `EDR Tools, system health monitors`
+   - Perform post-restoration checks, including log reviews and endpoint scans, to verify clean state and operational readiness.
+   - Conduct basic functionality tests to confirm no service disruptions remain.
 4. **Monitor for recurrence or residual indicators**
-   - **Procedure:** Maintain increased monitoring of involved accounts, endpoints, and domains for a defined period.
-   - **Tools:** `SIEM, EDR dashboards`
+   - Maintain increased monitoring of involved accounts, endpoints, and domains for a defined period.
 5. **Document recovery actions and update incident ticket**
-   - **Procedure:** Record all recovery steps, outcomes, and verification details to close out the incident formally.
-   - **Tools:** `Internal incident response documentation systems`
+   - Record all recovery steps, outcomes, and verification details to close out the incident formally.
+   - Ensure documentation is reviewed and approved by the IR team or SOC lead.
 
 
 --------------
@@ -134,7 +121,5 @@ In addition to the general steps and guidance in the incident response plan:
 #### Additional Information
 
 - Playbook template adapted from [Incident-Playbook by austinsonger](https://github.com/austinsonger/Incident-Playbook), licensed under the MIT License.
-- **Reference:** [MITRE ATT&CK T1566 - Phishing](https://attack.mitre.org/techniques/T1566/)
-- **Playbook Owner:** Amado | Created May 2025
 
 
