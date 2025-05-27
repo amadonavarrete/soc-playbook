@@ -7,6 +7,8 @@
 - [Splunk - Phishing Attacks: Protecting Against Them](https://www.splunk.com/en_us/blog/learn/phishing-scams-attacks.html)
 ## Exfiltration Over Web Service: Webhooks
 - [MITRE ATT&CK T1567.004 - Exfiltration Over Web Service: Webhooks](https://attack.mitre.org/techniques/T1567/004/)
+- [DEFEND - MITRE ATT&CK T1567.004](https://d3fend.mitre.org/offensive-technique/attack/T1567.004/)
+- [Red Hat - What is a webhook?](https://www.redhat.com/en/topics/automation/what-is-a-webhook)
 - [Splunk - Detecting Data Exfiltration Activities](https://lantern.splunk.com/Security/UCE/Guided_Insights/Anomaly_detection/Detecting_data_exfiltration_activities)
 - [Splunk - Data Exfiltration: Prevention, Risks & Best Practices](https://www.splunk.com/en_us/blog/learn/data-exfiltration.html)
 
