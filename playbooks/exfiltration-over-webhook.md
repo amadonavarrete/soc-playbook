@@ -48,32 +48,32 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 #### Contain
 
 1. **Isolate the affected host**
-   - **Procedure**: Immediately quarantine the host to prevent further exfiltration or lateral movement.
-   - **Automate**: Utilize SOAR to auto-isolate based on IOC or alert severity.
-   - **Tools**: `EDR/XDR platforms`
+   - **Procedure:** Immediately quarantine the host to prevent further exfiltration or lateral movement.
+   - **Automate:** Utilize SOAR to auto-isolate based on IOC or alert severity.
+   - **Tools:** `EDR/XDR platforms`
 2. **Block outbound webhook domains/IPs**
-   - **Procedure**: Add known malicious webhook URLs or IPs to blocklists.
-   - **Automate**: Trigger dynamic rule updates via threat intelligence feeds and orchestration playbooks.
-   - **Tools**: `Firewall, Web Proxy, DNS Filtering`
+   - **Procedure:** Add known malicious webhook URLs or IPs to blocklists.
+   - **Automate:** Trigger dynamic rule updates via threat intelligence feeds and orchestration playbooks.
+   - **Tools:** `Firewall, Web Proxy, DNS Filtering`
 4. **Revoke webhook access (if internal)**
-   - **Procedure**: Invalidate or delete exposed webhook URLs and rotate any associated secrets.
-   - **Automate**: Use scripted API calls to disable webhooks upon detection.
-   - **Tools**: `API Management Portals, DevOps Tools`
+   - **Procedure:** Invalidate or delete exposed webhook URLs and rotate any associated secrets.
+   - **Automate:** Use scripted API calls to disable webhooks upon detection.
+   - **Tools:** `API Management Portals, DevOps Tools`
 
 #### Eradicate
 
 1. **Remove malicious artifacts**
-   - **Procedure**: Scan and remove malicious scripts, binaries, or scheduled tasks used for webhook-based exfiltration.
-   - **Tools**: `EDR/AV platforms`
+   - **Procedure:** Scan and remove malicious scripts, binaries, or scheduled tasks used for webhook-based exfiltration.
+   - **Tools:** `EDR/AV platforms`
 2. **Disable compromised accounts or credentials**
-   - **Procedure**: Disable or reset accounts involved in the compromise, especially if credentials were used to access webhook endpoints.
-   - **Tools**: `IAM/IDP`
+   - **Procedure:** Disable or reset accounts involved in the compromise, especially if credentials were used to access webhook endpoints.
+   - **Tools:** `IAM/IDP`
 3. **Clear persistence mechanisms**
-   - **Procedure**: Identify and remove persistence techniques such as startup entries, scheduled tasks, or registry changes.
-   - **Tools**: `Sysinternals, EDR platforms`
+   - **Procedure:** Identify and remove persistence techniques such as startup entries, scheduled tasks, or registry changes.
+   - **Tools:** `Sysinternals, EDR platforms`
 4. **Reimage if necessary**
-   - **Procedure**: If system integrity is questionable, initiate a secure reimage of the affected asset.
-   - **Tools**: `Endpoint management systems`
+   - **Procedure:** If system integrity is questionable, initiate a secure reimage of the affected asset.
+   - **Tools:** `Endpoint management systems`
 
 --------------
 
@@ -85,47 +85,35 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 ### Recover
 
-`TODO: Customize recovery steps for <Type of Incident>.`
-
-`TODO: Specify tools and procedures for each step, below.`
-
 In addition to the general steps and guidance in the incident response plan:
+1. **Restore endpoint integrity**
+   - **Procedure:** Reimage compromised systems or verify full cleanup.
+   - **Tools:** `EDR platforms, Endpoint management tools`
+2. **Reset credentials and secrets**
+   - **Procedure:** Rotate credentials, webhook tokens, and API keys exposed during the incident.
+   - **Tools:** `IAM solutions, Secrets managers`
+3. **Reinstate blocked services safely**
+   - **Procedure:** Gradually re-enable restricted services following validation and approval by IR team.
+   - **Tools:** `Firewall/Proxy Management, Change management system`
+4. **Verify monitoring coverage**
+   - **Procedure:** Confirm telemetry and alerts are active for similar threat patterns and exfiltration attempts.
+   - **Tools:** `SIEM, SOAR playbooks`
+5. **Conduct system validation**
+   - **Procedure:** Run post-recovery scans to confirm systems are secure and compliant.
+   - **Tools:** `Vulnerability scanners, Integrity monitoring`
 
 
 --------------
   
 ### Lessons Learned
 
-The goal of the phase is to discover how to improve the incident response process.  
-You need to answer some basic questions, using developed incident report:  
-
-- What happened?  
-- What did we do well?  
-- What could we have done better?  
-- What will we do differently next time?  
-
-The incident report is the key to improvements.  
-
-`TODO: Add items that will occur post recover.`
-  
-1.    Perform routine cyber hygiene due diligence
-2.    Engage external cybersecurity-as-a-service providers and response professionals
+1. Confirm all systems are functioning securely.
+2. Conduct a formal post-incident review with all stakeholders.
+3. Revise playbooks, detection rules, and incident response plans.
+4. Inform affected users of the resolution and any follow-up steps.
+5. Submit post-incident reports to regulatory bodies, if applicable.
+6. Enhance SIEM rules, SOAR playbooks, and alert thresholds based on incident findings.
  
-
-##### Develop the incident report
-
-Develop the Incident Report using your corporate template.  
-
-It should include:  
-
-1. Executive Summary with a short description of damage, actions taken, root cause, and key metrics (Time To Detect, Time To Respond, Time To Recover etc)  
-2. Detailed timeline of adversary actions mapped to [ATT&CK tactics](https://attack.mitre.org/tactics/enterprise/), but most probably most of the actions will be in Actions On Objective stage, which is not very representative and useful)  
-3. Detailed timeline of actions taken by Incident Response Team  
-4. Root Cause Analysis and Recommendations for improvements based on its conclusion  
-5. List of specialists involved in Incident Response with their roles  
-
- 
-
 --------------
 
 ### Resources
@@ -133,6 +121,7 @@ It should include:
 #### Additional Information
 
 1. Playbook template adapted from [Incident-Playbook by austinsonger](https://github.com/austinsonger/Incident-Playbook), licensed under the MIT License.
-2. <a name="identity-and-access-playbook-ref-1"></a>["Title"](#TODO-url), Author Last Name (Date)
+2. **Reference:** [MITRE ATT&CK T1567.004 - Exfiltration Over Web Service: Webhooks](https://attack.mitre.org/techniques/T1567/004/)
+3. **Playbook Owner:** Amado | Created May 2025
 
 
