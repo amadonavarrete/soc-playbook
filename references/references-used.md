@@ -4,3 +4,5 @@
 - [Splunk - Data Exfiltration: Prevention, Risks & Best Practices](https://www.splunk.com/en_us/blog/learn/data-exfiltration.html)
 ## Phishing
 - [Splunk - Phishing Attacks: Protecting Against Them](https://www.splunk.com/en_us/blog/learn/phishing-scams-attacks.html)
+## User Execution: Malicious Link
+- [Splunk - What is Malware Detection?](https://www.splunk.com/en_us/blog/learn/malware-detection.html)
