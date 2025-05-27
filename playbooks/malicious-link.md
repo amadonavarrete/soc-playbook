@@ -118,6 +118,5 @@ In addition to the general steps and guidance in the incident response plan:
 #### Additional Information
 
 - Playbook template adapted from [Incident-Playbook by austinsonger](https://github.com/austinsonger/Incident-Playbook), licensed under the MIT License.
-- [MITRE ATT&CK T1204.001 - User Execution: Malicious Link](https://attack.mitre.org/techniques/T1204/001/)
 
 
