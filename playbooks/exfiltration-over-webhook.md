@@ -120,8 +120,8 @@ In addition to the general steps and guidance in the incident response plan:
 
 #### Additional Information
 
-1. Playbook template adapted from [Incident-Playbook by austinsonger](https://github.com/austinsonger/Incident-Playbook), licensed under the MIT License.
-2. **Reference:** [MITRE ATT&CK T1567.004 - Exfiltration Over Web Service: Webhooks](https://attack.mitre.org/techniques/T1567/004/)
-3. **Playbook Owner:** Amado | Created May 2025
+- Playbook template adapted from [Incident-Playbook by austinsonger](https://github.com/austinsonger/Incident-Playbook), licensed under the MIT License.
+- **Reference:** [MITRE ATT&CK T1567.004 - Exfiltration Over Web Service: Webhooks](https://attack.mitre.org/techniques/T1567/004/)
+- **Playbook Owner:** Amado | Created May 2025
 
 
