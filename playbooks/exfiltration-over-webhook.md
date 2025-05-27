@@ -48,32 +48,27 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 #### Contain
 
 1. **Isolate the affected host**
-   - **Procedure:** Immediately quarantine the host to prevent further exfiltration or lateral movement.
-   - **Automate:** Utilize SOAR to auto-isolate based on IOC or alert severity.
-   - **Tools:** `EDR/XDR platforms`
+   - Immediately quarantine the host to prevent further exfiltration or lateral movement.
+   - Conduct an initial triage to assess the scope of the exfiltration attempt.
 2. **Block outbound webhook domains/IPs**
-   - **Procedure:** Add known malicious webhook URLs or IPs to blocklists.
-   - **Automate:** Trigger dynamic rule updates via threat intelligence feeds and orchestration playbooks.
-   - **Tools:** `Firewall, Web Proxy, DNS Filtering`
+   - Add known malicious webhook URLs or IPs to blocklists.
 4. **Revoke webhook access (if internal)**
-   - **Procedure:** Invalidate or delete exposed webhook URLs and rotate any associated secrets.
-   - **Automate:** Use scripted API calls to disable webhooks upon detection.
-   - **Tools:** `API Management Portals, DevOps Tools`
+   - Invalidate or delete exposed webhook URLs and rotate any associated secrets.
+   - Audit webhook configurations and permissions to ensure no further unauthorized access exists.
 
 #### Eradicate
 
 1. **Remove malicious artifacts**
-   - **Procedure:** Scan and remove malicious scripts, binaries, or scheduled tasks used for webhook-based exfiltration.
-   - **Tools:** `EDR/AV platforms`
+   - Scan and remove malicious scripts, binaries, or scheduled tasks used for webhook-based exfiltration.
+   - Validate that all known IOCs are purged from the system.
 2. **Disable compromised accounts or credentials**
-   - **Procedure:** Disable or reset accounts involved in the compromise, especially if credentials were used to access webhook endpoints.
-   - **Tools:** `IAM/IDP`
+   - Disable or reset accounts involved in the compromise, especially if credentials were used to access webhook endpoints.
+   - Review access logs to ensure no further unauthorized usage occurred before disabling.
 3. **Clear persistence mechanisms**
-   - **Procedure:** Identify and remove persistence techniques such as startup entries, scheduled tasks, or registry changes.
-   - **Tools:** `Sysinternals, EDR platforms`
+   - Identify and remove persistence techniques such as startup entries, scheduled tasks, or registry changes.
 4. **Reimage if necessary**
-   - **Procedure:** If system integrity is questionable, initiate a secure reimage of the affected asset.
-   - **Tools:** `Endpoint management systems`
+   - If system integrity is questionable, initiate a secure reimage of the affected asset.
+   - Restore from a trusted, validated image and apply all security updates post-restoration.
 
 --------------
 
@@ -87,20 +82,20 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 In addition to the general steps and guidance in the incident response plan:
 1. **Restore endpoint integrity**
-   - **Procedure:** Reimage compromised systems or verify full cleanup.
-   - **Tools:** `EDR platforms, Endpoint management tools`
+   - Reimage compromised systems or verify full cleanup using deep scans and hash validation.
+   - Apply latest patches and configurations before reconnecting to the production network.
 2. **Reset credentials and secrets**
-   - **Procedure:** Rotate credentials, webhook tokens, and API keys exposed during the incident.
-   - **Tools:** `IAM solutions, Secrets managers`
+   - Rotate compromised credentials, webhook tokens, and API keys across impacted services.
+   - Notify impacted teams and ensure updated credentials are stored securely.
 3. **Reinstate blocked services safely**
-   - **Procedure:** Gradually re-enable restricted services following validation and approval by IR team.
-   - **Tools:** `Firewall/Proxy Management, Change management system`
+   - Gradually re-enable disabled services after security validation and formal IR team approval.
+   - Conduct service-specific risk assessments before restoring full access.
 4. **Verify monitoring coverage**
-   - **Procedure:** Confirm telemetry and alerts are active for similar threat patterns and exfiltration attempts.
-   - **Tools:** `SIEM, SOAR playbooks`
+   - Confirm telemetry and alerts are active for similar threat patterns and exfiltration attempts.
+   - Test detection rules and logging pipelines to confirm effectiveness.
 5. **Conduct system validation**
-   - **Procedure:** Run post-recovery scans to confirm systems are secure and compliant.
-   - **Tools:** `Vulnerability scanners, Integrity monitoring`
+   - Run post-recovery scans to confirm systems are secure and compliant.
+   - Document validation outcomes and update asset tracking with recovery status.
 
 
 --------------
@@ -120,8 +115,7 @@ In addition to the general steps and guidance in the incident response plan:
 
 #### Additional Information
 
-- Playbook template adapted from [Incident-Playbook by austinsonger](https://github.com/austinsonger/Incident-Playbook), licensed under the MIT License.
-- **Reference:** [MITRE ATT&CK T1567.004 - Exfiltration Over Web Service: Webhooks](https://attack.mitre.org/techniques/T1567/004/)
-- **Playbook Owner:** Amado | Created May 2025
+Playbook template adapted from [Incident-Playbook by austinsonger](https://github.com/austinsonger/Incident-Playbook), licensed under the MIT License.
+
 
 
