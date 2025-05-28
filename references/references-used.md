@@ -1,4 +1,8 @@
-# References Used
+# References
+## Network Service Discovery
+- [MITRE ATT&CK T1046 - Network Service Discovery](https://attack.mitre.org/techniques/T1046/)
+## Valid Accounts: Default Accounts
+- [MITRE ATT&CK T1078.001 - Valid Accounts: Default Accounts](https://attack.mitre.org/techniques/T1078/001/)
 ## User Execution: Malicious Link
 - [MITRE ATT&CK T1204.001 - User Execution: Malicious Link](https://attack.mitre.org/techniques/T1204/001/)
 - [Splunk - What is Malware Detection?](https://www.splunk.com/en_us/blog/learn/malware-detection.html)
