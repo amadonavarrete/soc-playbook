@@ -1,2 +1,8 @@
-# soc-tier1-playbook
-A structured incident response playbook for Tier 1 SOC analysts, covering key alerts: malware infections, foreign IP logins, phishing reports, port scans, and outbound data exfiltration.
+![SOC Playbook Banner](resources/soc-playbook-banner.png)
+
+## Table of Contents
+- [Network Service Discovery](/playbooks/network-service-discovery.md)
+- [Valid Accounts: Default Accounts](/playbooks/default-accounts.md)
+- [User Execution: Malicious Link](/playbooks/malicious-link.md)
+- [Phishing](/playbooks/phishing.md)
+- [Exfiltration Over Web Service: Webhooks](/playbooks/exfiltration-over-webhook.md)
