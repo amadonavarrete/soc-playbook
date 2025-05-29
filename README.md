@@ -1,9 +1,13 @@
 ![SOC Playbook Banner](resources/soc-playbook-banner.png)
 
+A collection of structured incident response playbooks designed for SOC analysts. <br><br>
+This project was created to gain hands-on experience in researching, writing, and maintaining structured response guides based on real-world threat scenarios. Each playbook is based on relevant [MITRE ATT&CK](https://attack.mitre.org/) techniques and focuses on common alert types found in enterprise environments.
+
 ## Table of Contents
 ### Playbooks
+This repo currently contains the following playbooks:
 - [Network Service Discovery](/playbooks/network-service-discovery.md)
-- [Valid Accounts: Default Accounts](/playbooks/default-accounts.md)
+- [Valid Accounts: Default Account](/playbooks/default-accounts.md)
 - [User Execution: Malicious Link](/playbooks/malicious-link.md)
 - [Phishing](/playbooks/phishing.md)
 - [Exfiltration Over Web Service: Webhooks](/playbooks/exfiltration-over-webhook.md)
