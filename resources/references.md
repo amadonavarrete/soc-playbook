@@ -1,8 +1,11 @@
 # References
 ## Network Service Discovery
 - [MITRE ATT&CK T1046 - Network Service Discovery](https://attack.mitre.org/techniques/T1046/)
+- [Heimdal - Scanning Attack: What It Is and How to Protect Your Organization Against It?](https://heimdalsecurity.com/blog/scanning-attack-what-it-is-and-how-to-protect-your-organization-against-it/)
 ## Valid Accounts: Default Accounts
 - [MITRE ATT&CK T1078.001 - Valid Accounts: Default Accounts](https://attack.mitre.org/techniques/T1078/001/)
+- [CISA - Risks of Default Passwords on the Internet](https://www.cisa.gov/news-events/alerts/2013/06/24/risks-default-passwords-internet)
+- [CISA - Choosing and Protecting Passwords](https://www.cisa.gov/news-events/news/choosing-and-protecting-passwords)
 ## User Execution: Malicious Link
 - [MITRE ATT&CK T1204.001 - User Execution: Malicious Link](https://attack.mitre.org/techniques/T1204/001/)
 - [Splunk - What is Malware Detection?](https://www.splunk.com/en_us/blog/learn/malware-detection.html)
