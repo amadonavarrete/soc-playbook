@@ -11,12 +11,11 @@
 (P) Preparation
 
 1. Implement URL filtering and DNS protections.
-2. Deploy email and web gateway security.
-3. Enforce least privilege on endpoints.
-4. Enable security features in browsers.
+2. Enforce least privilege on endpoints.
+3. Enable security features in browsers.
+4. Preconfigure incident response tools.
 5. Conduct user awareness training.
-6. Preconfigure incident response tools.
-7. Maintain threat intelligence feeds.
+6. Maintain threat intelligence feeds.
  
 ```
   
@@ -27,8 +26,8 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 ### Investigate
 
 #### Key Questions
-- **Did the user click the link, and what was the observed behavior or result?**
-- **What endpoint and network activity occurred immediately after the link was accessed?**
+- **Did the user click the link, and what was the result?**
+- **What endpoint/network activity occurred immediately after the link was accessed?**
 - **Was any payload delivered, and if so, was it executed or blocked?**
 
 1. Identify the user and system involved.
@@ -49,17 +48,14 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 #### Contain
 
 1. **Isolate the affected endpoint**
-   - Disconnect the device from the network.
    - Restrict all outbound/inbound communications immediately.
 2. **Quarantine downloaded files**
    - Locate and isolate any files downloaded as a result of the link click.
 3. **Block malicious domains/IPs**
-   - Add indicators to network and endpoint blocklists to stop further access.
 4. **Disable affected user accounts temporarily (if compromise suspected)**
    - Suspend the user's account to prevent further malicious activity.
    - Monitor for attempts to reauthenticate.
 5. **Alert and engage SOC Tier 2 or IR Team**
-   - Escalate with full context if incident exceeds Tier 1 scope.
 
   
 #### Eradicate
@@ -72,10 +68,7 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
    - Invalidate any user credentials that may have been harvested and enforce password resets.
    - Check for reuse of credentials across other systems and rotate if necessary.
 4. **Purge malicious emails or messages**
-   - Search across user mailboxes and remove the original message containing the link.
-   - Confirm deletion from quarantine and ensure message trace logs are preserved.
 5. **Update blocklists and detection rules**
-   - Add discovered domains, URLs, hashes, and IPs to endpoint, proxy, and SIEM blocklists.
 --------------
 
 ### Communicate
@@ -90,11 +83,9 @@ In addition to the general steps and guidance in the incident response plan:
 
 1. **Restore affected systems from clean backups**
    - Use verified, malware-free backups to restore compromised endpoints.
-   - Validate system integrity and ensure updates are current before reconnecting to the network.
 2. **Re-enable user accounts and access**
    - Once confidence is established that no compromise persists, re-enable any disabled user accounts and confirm multifactor authentication is enforced.
 3. **Validate email system integrity**
-   - Ensure that mail routing, filtering, and security controls are functioning as expected.
    - Conduct a post-incident review of mail flow and delivery settings.
 4. **Conduct post-restoration testing**
    - Run vulnerability scans and endpoint health checks to confirm no residual threats remain and that systems are operating normally.
