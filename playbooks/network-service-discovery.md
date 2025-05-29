@@ -48,7 +48,6 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 #### Contain
 
 1. **Isolate the affected endpoint**
-   - Disconnect the system from the network.
 2. **Block scanning traffic**
    - Limit port/protocol access where needed.
 3. **Revoke credentials used in the scan**
@@ -94,7 +93,6 @@ In addition to the general steps and guidance in the incident response plan:
 
  1. Review and refine detection rules for any abnormal internal scanning.
  2. Assess gaps in current network segmentation.
- 3. Update necessary playbooks and IR procedures with new relevant information.
  4. Conduct a team debrief.
  5. Perform tabletop exercises focused on discovery attacks.
 
