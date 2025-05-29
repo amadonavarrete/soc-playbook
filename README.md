@@ -1,8 +1,17 @@
 ![SOC Playbook Banner](resources/soc-playbook-banner.png)
 
 ## Table of Contents
+### Playbooks
 - [Network Service Discovery](/playbooks/network-service-discovery.md)
 - [Valid Accounts: Default Accounts](/playbooks/default-accounts.md)
 - [User Execution: Malicious Link](/playbooks/malicious-link.md)
 - [Phishing](/playbooks/phishing.md)
 - [Exfiltration Over Web Service: Webhooks](/playbooks/exfiltration-over-webhook.md)
+### Resources
+The following materials were used during the research and development of each playbook:
+- [References](/resources/references.md)
+---------------------
+### Want to build your own playbook?
+If you're interested in creating your own, check out the [Playbook Template](/templates/playbook-template.md). <br> 
+The template is adapted from [Incident-Playbook by austinsonger](https://github.com/austinsonger/Incident-Playbook), licensed under the MIT License.
+> 💡 Feel free to use the playbooks in this repo as references for your own work. 
