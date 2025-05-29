@@ -1,7 +1,7 @@
 ![SOC Playbook Banner](resources/soc-playbook-banner.png)
 
 A collection of structured incident response playbooks designed for SOC analysts. <br><br>
-This project was created to gain hands-on experience in researching, writing, and maintaining structured response guides based on real-world threat scenarios. Each playbook is based on relevant [MITRE ATT&CK](https://attack.mitre.org/) techniques and focuses on common alert types found in enterprise environments.
+This project was created to gain hands-on experience in researching, writing, and maintaining structured response guides based on real-world threat scenarios. Each playbook maps to specific [MITRE ATT&CK](https://attack.mitre.org/) techniques and focuses on common alert types found in enterprise environments.
 
 ## Table of Contents
 ### Playbooks
