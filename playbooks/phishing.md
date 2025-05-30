@@ -12,12 +12,10 @@
 
 1. Conduct user awareness training.
 2. Implement email security tools.
-3. Establish incident reporting channels.
-4. Enable MFA.
-5. Preconfigure detection rules.
-6. Maintain threat intelligence feeds.
-7. Run simulated phishing campaigns.
-8. Establish response playbooks.
+3. Enable MFA.
+4. Preconfigure detection rules.
+5. Maintain threat intelligence feeds.
+6. Run simulated phishing campaigns.
  
 ```
   
@@ -41,7 +39,6 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 7. Pull URLs, domains, file hashes, and IPs for analysis.
 8. Investigate external communications to known or suspicious phishing infrastructure.
 9. Identify any additional compromised accounts or lateral movement stemming from the phishing attempt.
-10. Compile investigation results for response planning and handoff to containment/remediation teams.
 
 --------------
 
@@ -89,17 +86,14 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 In addition to the general steps and guidance in the incident response plan:
 
 1. **Restore affected systems to trusted state**
-   - Reimage compromised endpoints or restore from known-good backups to ensure removal of phishing-related malware.
+   - Restore from known-good backups to ensure removal of phishing-related malware.
 2. **Re-enable user accounts with updated credentials**
    - After confirming no ongoing compromise, reinstate affected accounts with enforced password changes and MFA validation.
 3. **Validate system integrity and functionality**
-   - Perform post-restoration checks, including log reviews and endpoint scans, to verify clean state and operational readiness.
-   - Conduct basic functionality tests to confirm no service disruptions remain.
 4. **Monitor for recurrence or residual indicators**
    - Maintain increased monitoring of involved accounts, endpoints, and domains for a defined period.
 5. **Document recovery actions and update incident ticket**
    - Record all recovery steps, outcomes, and verification details to close out the incident formally.
-   - Ensure documentation is reviewed and approved by the IR team or SOC lead.
 
 
 --------------
@@ -112,7 +106,6 @@ In addition to the general steps and guidance in the incident response plan:
  4. Enhance user awareness training.
  5. Implement control improvements.
  6. Review and test automation workflows.
- 7. Document metrics and report to leadership.
 
 --------------
 
