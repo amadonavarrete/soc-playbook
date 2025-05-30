@@ -60,7 +60,6 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
    - Document any changes made and confirm no automated systems are impacted.
 2. **Review and adjust default account permissions to follow the principle of least privilege.**
 3. **Scan for persistence mechanisms**
-4. **Verify the removal of backdoors**
 
 --------------
 
