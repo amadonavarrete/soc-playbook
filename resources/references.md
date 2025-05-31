@@ -12,6 +12,7 @@
 ## Phishing
 - [MITRE ATT&CK T1566 - Phishing](https://attack.mitre.org/techniques/T1566/)
 - [Splunk - Phishing Attacks: Protecting Against Them](https://www.splunk.com/en_us/blog/learn/phishing-scams-attacks.html)
+- [Cisco - What is Phishing?](https://www.cisco.com/site/us/en/learn/topics/security/what-is-phishing.html)
 ## Exfiltration Over Web Service: Webhooks
 - [MITRE ATT&CK T1567.004 - Exfiltration Over Web Service: Webhooks](https://attack.mitre.org/techniques/T1567/004/)
 - [DEFEND - MITRE ATT&CK T1567.004](https://d3fend.mitre.org/offensive-technique/attack/T1567.004/)
