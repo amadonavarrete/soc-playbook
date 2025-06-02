@@ -1,4 +1,6 @@
 # References
+## Creating Playbooks
+- [blinkops - Creating an Effective SOC Playbook](https://www.blinkops.com/blog/creating-an-effective-soc-playbook)
 ## Network Service Discovery
 - [MITRE ATT&CK T1046 - Network Service Discovery](https://attack.mitre.org/techniques/T1046/)
 - [Heimdal - Scanning Attack: What It Is and How to Protect Your Organization Against It?](https://heimdalsecurity.com/blog/scanning-attack-what-it-is-and-how-to-protect-your-organization-against-it/)
