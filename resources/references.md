@@ -1,6 +1,7 @@
 # References
 ## MITRE ATT&CK
 - [exabeam - What is MITRE ATT&CK?](https://www.exabeam.com/explainers/mitre-attck/what-is-mitre-attck-an-explainer/)
+- [paloaltonetworks - What are MITRE ATT&CK Techniques](https://www.paloaltonetworks.com/cyberpedia/what-are-mitre-attack-techniques)
 ## Creating Playbooks
 - [blinkops - Creating an Effective SOC Playbook](https://www.blinkops.com/blog/creating-an-effective-soc-playbook)
 - [cadosecurity - Creating an Effective SOC Playbook](https://www.cadosecurity.com/wiki/creating-an-effective-soc-playbook)
